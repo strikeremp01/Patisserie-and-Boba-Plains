@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patisserie &amp; Boba Plains</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <audio id="bgm" loop>
+    <source src="audio/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="music-btn" aria-label="Toggle music" aria-pressed="false">
+      <i class="bi bi-volume-mute-fill"></i>
+  </button>
+
+  <header>
+    <div class="container text-center">
+      <img src="images/LOGO.png" alt="Brand Logo" height="125" width="125">
+    </div>
+  </header>
+
+  <nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="order.html" class="active">ORDER</a></li>
+    </ul>
+  </nav>
+
+  <main class="order-container">
+    <div class="order-header text-center mb-4">
+      <p class="sub-heading">FRESHLY MADE FOR YOU</p>
+      <h2>Place Your Cozy Order</h2>
+    </div>
+
+    <div id="secretToast" class="secret-toast d-none">
+      <i class="bi bi-stars text-warning me-2"></i>
+      <span><strong>Secret Unlocked!</strong> Use code <strong>COZY10</strong> for a cozy smile at pickup!</span>
+    </div>
+
+    <form id="cozyOrderForm" onsubmit="handlePlaceOrder(event)">
+      <div class="row g-4">
+        
+        <div class="col-lg-7">
+          <div class="order-card p-4">
+            <h3 class="section-title d-flex align-items-center">
+              <button type="button" class="secret-icon-btn me-2" onclick="triggerSecretFun()" title="Click for a cozy surprise!">
+                <i class="bi bi-sliders" id="secretIcon"></i>
+              </button>
+              <span>Order Customization</span>
+            </h3>
+
+            <div class="mb-3">
+              <label for="custName" class="form-label fw-bold">Full Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="custName" placeholder="e.g. Jane Doe" pattern="[A-Za-z\s]+" title="Name must only contain letters and spaces (no numbers)." required>
+            </div>
+
+            <div class="mb-3">
+              <label for="custEmail" class="form-label fw-bold">Email Address <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="custEmail" placeholder="e.g. jane@example.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="custPhone" class="form-label fw-bold">Phone Number <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="custPhone" placeholder="e.g. 09123456789" pattern="[0-9]{10,12}" title="Phone number must be digits only and between 10 to 12 digits." required>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="mb-3">
+              <label for="itemSelect" class="form-label fw-bold">Select Your Drink or Pastry <span class="text-danger">*</span></label>
+              <select class="form-select" id="itemSelect" onchange="toggleDrinkOptions()">
+                <option value="" selected disabled>-- Choose an item --</option>
+                <optgroup label="Milk Tea">
+                  <option value="Milktea|90|drink">Milktea (PHP 90.00)</option>
+                  <option value="Pearl Milktea|100|drink">Pearl Milktea (PHP 100.00)</option>
+                  <option value="Okinawa Brown Sugar Milktea|110|drink">Okinawa Brown Sugar Milktea (PHP 110.00)</option>
+                  <option value="Taro Milktea|105|drink">Taro Milktea (PHP 105.00)</option>
+                  <option value="Hokkaido Milktea|110|drink">Hokkaido Milktea (PHP 110.00)</option>
+                  <option value="Salted Cream Milktea|105|drink">Salted Cream Milktea (PHP 105.00)</option>
+                  <option value="Jasmine Milktea|110|drink">Jasmine Milktea (PHP 110.00)</option>
+                  <option value="Oreo Milktea|110|drink">Oreo Milktea (PHP 110.00)</option>
+                  <option value="Pudding Milktea|105|drink">Pudding Milktea (PHP 105.00)</option>
+                  <option value="Ichigo Milktea|105|drink">Ichigo Milktea (PHP 105.00)</option>
+                  <option value="Matcha Milktea|120|drink">Matcha Milktea (PHP 120.00)</option>
+                  <option value="Ichigo Matcha Milktea|130|drink">Ichigo Matcha Milktea (PHP 130.00)</option>
+                  <option value="Creamcheese Milktea|120|drink">Creamcheese Milktea (PHP 120.00)</option>
+                  <option value="Red Rose Milktea|115|drink">Red Rose Milktea (PHP 115.00)</option>
+                  <option value="Thai Milktea|115|drink">Thai Milktea (PHP 115.00)</option>
+                </optgroup>
+                <optgroup label="Pastries">
+                  <option value="Taiyaki|50|pastry">Taiyaki (PHP 50.00)</option>
+                  <option value="Dorayaki|55|pastry">Dorayaki (PHP 55.00)</option>
+                  <option value="Daifuku Mochi|50|pastry">Daifuku Mochi (PHP 50.00)</option>
+                  <option value="Hanami Dango|55|pastry">Hanami Dango (PHP 55.00)</option>
+                  <option value="Mochi Donuts|75|pastry">Mochi Donuts (PHP 75.00)</option>
+                  <option value="Souffle Pancakes|160|pastry">Souffle Pancakes (PHP 160.00)</option>
+                  <option value="Custard Tarts|85|pastry">Custard Tarts (PHP 85.00)</option>
+                  <option value="Japanese Cheesecake|150|pastry">Japanese Cheesecake (PHP 150.00)</option>
+                  <option value="Pudding|80|pastry">Pudding (PHP 80.00)</option>
+                  <option value="Crepe|120|pastry">Crepe (PHP 120.00)</option>
+                  <option value="Cornet|75|pastry">Cornet (PHP 75.00)</option>
+                  <option value="Muffin|70|pastry">Muffin (PHP 70.00)</option>
+                  <option value="Croissant|75|pastry">Croissant (PHP 75.00)</option>
+                  <option value="Biscoff Cheesecake|160|pastry">Biscoff Cheesecake (PHP 160.00)</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div id="drinkOptionsGroup">
+              <div class="mb-3">
+                <label class="form-label fw-bold d-block">Sweetness Level</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sweetness" id="sw25" value="25%">
+                  <label class="form-check-label" for="sw25">25%</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sweetness" id="sw50" value="50%">
+                  <label class="form-check-label" for="sw50">50%</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sweetness" id="sw75" value="75%">
+                  <label class="form-check-label" for="sw75">75%</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sweetness" id="sw100" value="100%" checked>
+                  <label class="form-check-label" for="sw100">100%</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-bold d-block">Ice Level</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="iceLevel" id="iceLess" value="Less Ice">
+                  <label class="form-check-label" for="iceLess">Less Ice</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="iceLevel" id="iceReg" value="Regular Ice" checked>
+                  <label class="form-check-label" for="iceReg">Regular Ice</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="iceLevel" id="iceNone" value="No Ice">
+                  <label class="form-check-label" for="iceNone">No Ice</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-bold d-block">Toppings (+PHP 15.00 each)</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topTapioca" value="Tapioca Pearls" data-price="15">
+                  <label class="form-check-label" for="topTapioca">Tapioca Pearls</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topPudding" value="Egg Pudding" data-price="15">
+                  <label class="form-check-label" for="topPudding">Egg Pudding</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topJelly" value="Grass Jelly" data-price="15">
+                  <label class="form-check-label" for="topJelly">Grass Jelly</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topOreo" value="Oreo Crumbles" data-price="15">
+                  <label class="form-check-label" for="topOreo">Oreo Crumbles</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topCheese" value="Cream Cheese" data-price="15">
+                  <label class="form-check-label" for="topCheese">Cream Cheese Cap</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topSalted" value="Salted Cream" data-price="15">
+                  <label class="form-check-label" for="topSalted">Salted Cream  Cap</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topOkinawa" value="Okinawa Brown Sugar" data-price="15">
+                  <label class="form-check-label" for="topOkinawa">Okinawa Brown Sugar Sauce</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input topping-check" type="checkbox" id="topIchigo" value="Ichigo Jam" data-price="15">
+                  <label class="form-check-label" for="topIchigo">Ichigo Jam</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-2 align-items-end mb-3">
+              <div class="col-6 col-sm-4">
+                <label for="itemQty" class="form-label fw-bold">Quantity</label>
+                <input type="number" class="form-control" id="itemQty" min="1" value="1">
+              </div>
+              <div class="col-6 col-sm-8">
+                <button type="button" class="btn btn-add-item w-100" onclick="addItemToCart()">
+                  <i class="bi bi-plus-circle me-1"></i> Add to Order
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="specialInstructions" class="form-label fw-bold">Special Instructions</label>
+              <textarea class="form-control" id="specialInstructions" rows="3" placeholder="Dietary restrictions, packaging requests..."></textarea>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="order-card p-4 sticky-top" style="top: 20px; z-index: 10;">
+            <h3 class="section-title"><i class="bi bi-receipt me-2"></i>Order Summary</h3>
+            
+            <div class="order-preview-banner text-center py-2 mb-3">
+              <span>Order Preview</span>
+            </div>
+
+            <div id="cartItemsContainer" class="cart-items-box mb-3">
+              <p class="text-muted text-center my-4 empty-cart-msg">No items added yet. Choose an item on the left!</p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center border-top pt-3 mb-3">
+              <span class="fw-bold fs-5">Estimated Total:</span>
+              <span id="estimatedTotal" class="fw-bold fs-4 text-accent">PHP 0.00</span>
+            </div>
+
+            <div class="prep-badge p-2 mb-3 text-center">
+              <i class="bi bi-clock-history me-1"></i> Est. Prep Time: <strong id="prepTime">0 mins</strong>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold d-block mb-2">Fulfillment</label>
+              <div class="fulfillment-switch d-flex gap-2">
+                <input type="radio" class="btn-check" name="fulfillment" id="pickupOpt" value="Pickup" checked>
+                <label class="btn btn-outline-custom flex-fill" for="pickupOpt"><i class="bi bi-shop me-1"></i> Pickup</label>
+
+                <input type="radio" class="btn-check" name="fulfillment" id="deliveryOpt" value="Delivery">
+                <label class="btn btn-outline-custom flex-fill" for="deliveryOpt"><i class="bi bi-truck me-1"></i> Delivery</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-order w-100 py-3 text-uppercase">
+              <span>Place Order</span>
+              <i class="bi bi-arrow-right-circle ms-2"></i>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </main>
+
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h4>Socials</h4>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a></li>
+                <li><a href="https://www.youtube.com/@yourpage" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Hours</h4>
+            <p>Mon-Sat: 8AM-8PM<br>Sun: Closed</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Address</h4>
+            <p>12 Sakura Lane<br>Kyoto Corner, District 4</p>
+        </div>
+
+    </div>
+
+    <p class="copyright">&copy; 2026 Patisserie &amp; Boba Plains. All rights reserved.</p>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous">
+  </script>
+
+  <script>
+    const bgm = document.getElementById('bgm');
+      const musicBtn = document.getElementById('music-btn');
+      const icon = musicBtn.querySelector('i');
+
+      bgm.volume = 0.1;
+
+      const savedTime = localStorage.getItem('bgmTime');
+      if (savedTime) bgm.currentTime = parseFloat(savedTime);
+
+      function setPlaying(isPlaying) {
+          icon.className = isPlaying ? 'bi bi-volume-up-fill' : 'bi bi-volume-mute-fill';
+          musicBtn.setAttribute('aria-pressed', isPlaying);
+          localStorage.setItem('bgmOn', isPlaying);
+      }
+
+      if (localStorage.getItem('bgmOn') === 'true') {
+          bgm.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+      }
+
+      musicBtn.addEventListener('click', () => {
+          if (bgm.paused) {
+              bgm.play();
+              setPlaying(true);
+          } else {
+              bgm.pause();
+              setPlaying(false);
+          }
+      });
+      setInterval(() => localStorage.setItem('bgmTime', bgm.currentTime), 1000);
+      window.addEventListener('beforeunload', () => localStorage.setItem('bgmTime', bgm.currentTime));
+    
+      let cart = [];
+
+    function triggerSecretFun() {
+      const icon = document.getElementById('secretIcon');
+      const toast = document.getElementById('secretToast');
+      
+      icon.classList.add('secret-spin');
+      toast.classList.remove('d-none');
+      
+      setTimeout(() => {
+        icon.classList.remove('secret-spin');
+      }, 1000);
+    }
+
+    function toggleDrinkOptions() {
+      const select = document.getElementById('itemSelect');
+      const drinkGroup = document.getElementById('drinkOptionsGroup');
+      if (!select.value) return;
+
+      const [name, price, type] = select.value.split('|');
+      if (type === 'pastry') {
+        drinkGroup.style.opacity = '0.4';
+        drinkGroup.querySelectorAll('input').forEach(i => i.disabled = true);
+      } else {
+        drinkGroup.style.opacity = '1';
+        drinkGroup.querySelectorAll('input').forEach(i => i.disabled = false);
+      }
+    }
+
+    function addItemToCart() {
+      const select = document.getElementById('itemSelect');
+      if (!select.value) {
+        alert('Please select an item from the dropdown first!');
+        return;
+      }
+
+      const [name, basePrice, type] = select.value.split('|');
+      const qtyInput = document.getElementById('itemQty'); 
+      const qty = parseInt(qtyInput.value) || 1;
+
+      if (qty <= 0) {
+        alert('Please enter a valid quantity.');
+        return;
+      }
+
+      let itemPrice = parseFloat(basePrice);
+      let details = [];
+
+      if (type === 'drink') {
+        const sweetness = document.querySelector('input[name="sweetness"]:checked')?.value || '100%';
+        const ice = document.querySelector('input[name="iceLevel"]:checked')?.value || 'Regular Ice';
+        details.push(`${sweetness} sweetness`, ice);
+
+        const checkedToppings = document.querySelectorAll('.topping-check:checked');
+        checkedToppings.forEach(top => {
+          itemPrice += parseFloat(top.getAttribute('data-price'));
+          details.push(top.value);
+        });
+      }
+
+      const cartItem = {
+        id: Date.now(),
+        name: name,
+        unitPrice: itemPrice,
+        qty: qty,
+        details: details.join(', ')
+      };
+
+      cart.push(cartItem);
+      renderCart();
+      
+      qtyInput.value = 1;
+      document.querySelectorAll('.topping-check').forEach(c => c.checked = false);
+    }
+
+    function removeItem(id) {
+      cart = cart.filter(item => item.id !== id);
+      renderCart();
+    }
+
+    function calculatePrepTime(totalQty) {
+      if (totalQty === 0) return '0 mins';
+      if (totalQty <= 3) return '10-15 mins';
+      if (totalQty <= 8) return '15-20 mins';
+      if (totalQty <= 15) return '20-30 mins';
+      return '35-45 mins (Large Order)';
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cartItemsContainer');
+      const totalDisplay = document.getElementById('estimatedTotal');
+      const prepDisplay = document.getElementById('prepTime');
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="text-muted text-center my-4 empty-cart-msg">No items added yet. Choose an item on the left!</p>';
+        totalDisplay.textContent = 'PHP 0.00';
+        prepDisplay.textContent = '0 mins';
+        return;
+      }
+
+      let html = '';
+      let grandTotal = 0;
+      let totalQty = 0;
+
+      cart.forEach(item => {
+        const itemTotal = item.unitPrice * item.qty;
+        grandTotal += itemTotal;
+        totalQty += item.qty;
+
+        html += `
+          <div class="cart-item border-bottom py-2">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <strong>${item.name}</strong> x${item.qty}
+                ${item.details ? `<br><small class="text-muted">${item.details}</small>` : ''}
+              </div>
+              <div class="text-end">
+                <span>PHP ${itemTotal.toFixed(2)}</span><br>
+                <button type="button" class="btn btn-sm btn-link text-danger p-0 border-0" onclick="removeItem(${item.id})">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      totalDisplay.textContent = `PHP ${grandTotal.toFixed(2)}`;
+      prepDisplay.textContent = calculatePrepTime(totalQty);
+    }
+
+    function handlePlaceOrder(e) {
+      e.preventDefault();
+
+      if (cart.length === 0) {
+        alert('Your order cart is empty! Please select an item and click "Add to Order".');
+        return;
+      }
+
+      const name = document.getElementById('custName').value;
+      const fulfillment = document.querySelector('input[name="fulfillment"]:checked').value;
+      
+      alert(`Thank you, ${name}! Your ${fulfillment} order has been placed successfully. Estimated Prep Time: ${document.getElementById('prepTime').textContent}`);
+      cart = [];
+      renderCart();
+      document.getElementById('cozyOrderForm').reset();
+      toggleDrinkOptions();
+    }
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

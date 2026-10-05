@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patisserie &amp; Boba Plains</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="container text-center">
+			<img src="images/logo.png" alt="Patisserie and Boba Plains Logo" height="125" width="125">
+		</div>
+	</header>
+
+	<nav>
+		<button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<ul id="nav-links">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="about.html">ABOUT US</a></li>
+			<li><a href="menu.html" class="active">MENU</a></li>
+			<li><a href="order.html">ORDER</a></li>
+		</ul>
+	</nav>
+	
+    <!-- MENU HEADER -->
+
+    <header class="menu-header">
+
+        <p class="menu-label">
+            A LITTLE SOMETHING SWEET
+        </p>
+
+        <h1>
+            Our Menu
+        </h1>
+
+        <p>
+            Explore our selection of Japanese-inspired pastries and freshly made treats.
+        </p>
+
+    </header>
+
+
+    <!-- CATEGORY TABS -->
+
+    <div class="menu-dropdown">
+
+        <div class="dropdown">
+
+            <button
+                class="category-dropdown dropdown-toggle"
+                type="button"
+                id="categoryDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                PASTRIES
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+
+                <li>
+                    <a class="dropdown-item" href="menu.html">
+                        ALL
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item active" href="pastries.html">
+                        PASTRIES
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item" href="bobas.html">
+                        BOBA DRINKS
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- PASTRY CATALOG -->
+
+    <section class="menu-catalog">
+
+        <div class="product-grid">
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/TAIYAKI.png"
+                    alt="Taiyaki"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Ichigo Taiyaki</h3>
+
+                    <p>
+                        Japanese fish-shaped pastry
+                        with a sweet filling.
+                    </p>
+
+                    <span class="product-price">
+                        ₱50.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/DORAYAKI.png"
+                    alt="Dorayaki"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Hazelnut Dorayaki</h3>
+
+                    <p>
+                        Soft Japanese pancakes filled
+                        with a sweet center.
+                    </p>
+
+                    <span class="product-price">
+                        ₱55.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/DAIFUKU MOCHI.png"
+                    alt="Daifuku Mochi"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Ichigo Daifuku Mochi</h3>
+
+                    <p>
+                        Soft and chewy mochi with
+                        a sweet filling.
+                    </p>
+
+                    <span class="product-price">
+                        ₱50.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/HANAMI DANGO.png"
+                    alt="Hanami Dango"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Hanami Dango</h3>
+
+                    <p>
+                        Soft, chewy rice dumplings covered
+						pink, white, and green
+                    </p>
+
+                    <span class="product-price">
+                        ₱55.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/MOCHI DONUTS.png"
+                    alt="Mochi Donuts"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Vanilla Mochi Donuts</h3>
+
+                    <p>
+                        Soft and chewy donuts with
+                        a delightful mochi texture.
+                    </p>
+
+                    <span class="product-price">
+                        ₱75.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/SOUFFLÉ PANCAKES.png"
+                    alt="Soufflé Pancakes"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Soufflé Pancakes</h3>
+
+                    <p>
+                        Light and fluffy pancakes
+                        made to melt in every bite.
+                    </p>
+
+                    <span class="product-price">
+                        ₱160.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/CUSTARD TART.png"
+                    alt="Custard Tarts"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Custard Tarts</h3>
+
+                    <p>
+                        Buttery pastry filled with
+                        smooth and creamy custard.
+                    </p>
+
+                    <span class="product-price">
+                        ₱85.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/JAPANESE CHEESECAKE.png"
+                    alt="Japanese Cheesecake"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Japanese Cheesecake</h3>
+
+                    <p>
+                        Light and fluffy cheesecake
+                        with a delicate texture.
+                    </p>
+
+                    <span class="product-price">
+                        ₱150.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/PUDDING.png"
+                    alt="Pudding"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Chocolate Pudding</h3>
+
+                    <p>
+                        Smooth and creamy pudding
+                        with a rich chocolate flavor.
+                    </p>
+
+                    <span class="product-price">
+                        ₱80.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/CREPE.png"
+                    alt="Crepe"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Vanilla Crepe</h3>
+
+                    <p>
+                        Thin and delicate crepes
+                        with a sweet vanilla cream filling.
+                    </p>
+
+                    <span class="product-price">
+                        ₱120.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/CORNET.png"
+                    alt="Cornet"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Chocolate Cornet</h3>
+
+                    <p>
+                        A crisp pastry shell filled
+                        with smooth cream.
+                    </p>
+
+                    <span class="product-price">
+                        ₱75.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/MUFFIN.png"
+                    alt="Muffin"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Chocolate Chip Muffin</h3>
+
+                    <p>
+                        A soft and comforting baked 
+                        treat for any time of day sprinkled with chocolate chips.
+                    </p>
+
+                    <span class="product-price">
+                        ₱70.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/BISCOFF.png"
+                    alt="Biscoff Cheesecake"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Biscoff Cheesecake</h3>
+
+                    <p>
+                        Creamy cheesecake topped
+                        with Biscoff crumbs.
+                    </p>
+
+                    <span class="product-price">
+                        ₱160.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/pastry/CROISSANT.png"
+                    alt="Croissant"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        PASTRY
+                    </p>
+
+                    <h3>Honey Butter Croissant</h3>
+
+                    <p>
+                        Flaky, buttery pastry with
+                        a delicate golden honeycrust.
+                    </p>
+
+                    <span class="product-price">
+                        ₱75.00
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- NUTRITION TABLE-->
+
+    <section class="nutrition-section">
+
+        <div class="section-heading">
+
+            <p class="home-label">
+                KNOW YOUR TREATS
+            </p>
+
+            <h2>
+                Nutrition & Allergen Matrix
+            </h2>
+
+            <p>
+                Check the nutritional information and
+                possible allergens for our pastries.
+            </p>
+
+        </div>
+
+
+        <div class="nutrition-table-wrapper">
+
+            <table class="nutrition-table">
+
+                <thead>
+
+                    <tr>
+                        <th>ITEM</th>
+                        <th>CATEGORY</th>
+                        <th>CALORIES</th>
+                        <th>ALLERGENS</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Ichigo Taiyaki</td>
+                        <td>Pastry</td>
+                        <td>~220 kcal</td>
+                        <td>Wheat, Egg, Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hazelnut Dorayaki</td>
+                        <td>Pastry</td>
+                        <td>~250 kcal</td>
+                        <td>Wheat, Egg, Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ichigo Daifuku Mochi</td>
+                        <td>Pastry</td>
+                        <td>~180 kcal</td>
+                        <td>May contain soy; depends on filling</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hanami Dango</td>
+                        <td>Pastry</td>
+                        <td>~180 kcal</td>
+                        <td>Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Vanilla Mochi Donuts</td>
+                        <td>Pastry</td>
+                        <td>~250 kcal</td>
+                        <td>Wheat, Egg, Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Soufflé Pancakes</td>
+                        <td>Pastry</td>
+                        <td>~300 kcal</td>
+                        <td>Wheat, Egg, Milk</td>
+                    </tr>
+
+                    <tr>
+                        <td>Custard Tarts</td>
+                        <td>Pastry</td>
+                        <td>~280 kcal</td>
+                        <td>Wheat, Egg, Milk</td>
+                    </tr>
+
+                    <tr>
+                        <td>Japanese Cheesecake</td>
+                        <td>Pastry</td>
+                        <td>~300 kcal</td>
+                        <td>Wheat, Egg, Milk</td>
+                    </tr>
+
+                    <tr>
+                        <td>Chocolate Pudding</td>
+                        <td>Pastry</td>
+                        <td>~180 kcal</td>
+                        <td>Egg, Milk</td>
+                    </tr>
+
+                    <tr>
+                        <td>Vanilla Crepe</td>
+                        <td>Pastry</td>
+                        <td>~250 kcal</td>
+                        <td>Wheat, Egg, Milk</td>
+                    </tr>
+
+                    <tr>
+                        <td>Chocolate Cornet</td>
+                        <td>Pastry</td>
+                        <td>~280 kcal</td>
+                        <td>Wheat, Egg, Milk</td>
+                    </tr>
+
+                    <tr>
+                        <td>Chocolate Chip Muffin</td>
+                        <td>Pastry</td>
+                        <td>~300 kcal</td>
+                        <td>Wheat, Egg, Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Biscoff Cheesecake</td>
+                        <td>Pastry</td>
+                        <td>~420 kcal</td>
+                        <td>Wheat, Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Honey Butter Croissant</td>
+                        <td>Pastry</td>
+                        <td>~270 kcal</td>
+                        <td>Wheat, Milk, Egg</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <audio id="bgm" loop>
+    <source src="audio/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="music-btn" aria-label="Toggle music" aria-pressed="false">
+    <i class="bi bi-volume-mute-fill"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+</script>
+
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+</script>
+
+<script>
+    const bgm = document.getElementById('bgm');
+    const musicBtn = document.getElementById('music-btn');
+    const icon = musicBtn.querySelector('i');
+
+    bgm.volume = 0.1;
+
+    // Restore the playback position from the last page
+    const savedTime = localStorage.getItem('bgmTime');
+    if (savedTime) bgm.currentTime = parseFloat(savedTime);
+
+    function setPlaying(isPlaying) {
+        icon.className = isPlaying ? 'bi bi-volume-up-fill' : 'bi bi-volume-mute-fill';
+        musicBtn.setAttribute('aria-pressed', isPlaying);
+        localStorage.setItem('bgmOn', isPlaying);
+    }
+
+    // If music was on before, try to resume. The browser may refuse until a click
+    if (localStorage.getItem('bgmOn') === 'true') {
+        bgm.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    }
+
+    musicBtn.addEventListener('click', () => {
+        if (bgm.paused) {
+            bgm.play();
+            setPlaying(true);
+        } else {
+            bgm.pause();
+            setPlaying(false);
+        }
+    });
+    setInterval(() => localStorage.setItem('bgmTime', bgm.currentTime), 1000);
+    window.addEventListener('beforeunload', () => localStorage.setItem('bgmTime', bgm.currentTime));
+</script>
+
+</body>
+
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h4>Socials</h4>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a></li>
+                <li><a href="https://www.youtube.com/@yourpage" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Hours</h4>
+            <p>Mon-Sat: 8AM-8PM<br>Sun: Closed</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Address</h4>
+            <p>12 Sakura Lane<br>Kyoto Corner, District 4</p>
+        </div>
+
+    </div>
+
+    <p class="copyright">&copy; 2026 Patisserie &amp; Boba Plains. All rights reserved.</p>
+</footer>
+
+</html>

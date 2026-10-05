@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patisserie &amp; Boba Plains</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="container text-center">
+			<img src="images/logo.png" alt="Patisserie and Boba Plains Logo" height="125" width="125">
+		</div>
+	</header>
+
+	<nav>
+		<button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<ul id="nav-links">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="about.html">ABOUT US</a></li>
+			<li><a href="menu.html" class="active">MENU</a></li>
+			<li><a href="order.html">ORDER</a></li>
+		</ul>
+	</nav>
+	
+    <!-- MENU HEADER -->
+
+    <header class="menu-header">
+
+        <p class="menu-label">
+            A LITTLE SOMETHING SWEET
+        </p>
+
+        <h1>
+            Our Menu
+        </h1>
+
+        <p>
+            Explore our selection of refreshing milk teas
+            and delicious boba drinks.
+        </p>
+
+    </header>
+
+
+    <!-- CATEGORY TABS -->
+
+    <div class="menu-dropdown">
+
+        <div class="dropdown">
+
+            <button
+                class="category-dropdown dropdown-toggle"
+                type="button"
+                id="categoryDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                BOBA DRINKS
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+
+                <li>
+                    <a class="dropdown-item" href="menu.html">
+                        ALL
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item" href="pastries.html">
+                        PASTRIES
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item active" href="bobas.html">
+                        BOBA DRINKS
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOBA CATALOG -->
+
+    <section class="menu-catalog">
+
+        <div class="product-grid">
+
+
+             <article class="product-card">
+
+                <img
+                    src="images/boba/BUBBLE TEA.png"
+                    alt="Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Milktea</h3>
+
+                    <p>
+                        Classic creamy milk tea
+                        with a smooth finish.
+                    </p>
+
+                    <span class="product-price">
+                        ₱90.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/PEARL BUBBLE TEA.png"
+                    alt="Pearl Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Pearl Milktea</h3>
+
+                    <p>
+                        Creamy milk tea paired
+                        with chewy pearls.
+                    </p>
+
+                    <span class="product-price">
+                        ₱100.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/OKINAWA BROWN SUGAR.png"
+                    alt="Okinawa Brown Sugar Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Okinawa Brown Sugar Milktea</h3>
+
+                    <p>
+                        Rich milk tea with the
+                        deep sweetness of brown sugar.
+                    </p>
+
+                    <span class="product-price">
+                        ₱110.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/TARO.png"
+                    alt="Taro Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Taro Milktea</h3>
+
+                    <p>
+                        Creamy milk tea with
+                        a sweet taro flavor.
+                    </p>
+
+                    <span class="product-price">
+                        ₱105.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/HOKKAIDO.png"
+                    alt="Hokkaido Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Hokkaido Milktea</h3>
+
+                    <p>
+                        Rich and creamy milk tea
+                        inspired by Hokkaido milk.
+                    </p>
+
+                    <span class="product-price">
+                        ₱110.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/SALTED CREAM.png"
+                    alt="Salted Cream Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Salted Cream Milktea</h3>
+
+                    <p>
+                        Creamy milk tea balanced
+                        with a lightly salted topping.
+                    </p>
+
+                    <span class="product-price">
+                        ₱105.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/JASMINE.png"
+                    alt="Jasmine Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Jasmine Milktea</h3>
+
+                    <p>
+                        Fragrant jasmine tea blended
+                        with creamy milk.
+                    </p>
+
+                    <span class="product-price">
+                        ₱110.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/OREO.png"
+                    alt="Oreo Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Oreo Milktea</h3>
+
+                    <p>
+                        Creamy milk tea combined
+                        with Oreo cookie flavor.
+                    </p>
+
+                    <span class="product-price">
+                        ₱110.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/PUDDING.png"
+                    alt="Pudding Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Pudding Milktea</h3>
+
+                    <p>
+                        Smooth milk tea paired
+                        with a sweet pudding topping.
+                    </p>
+
+                    <span class="product-price">
+                        ₱105.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/ICHIGO.png"
+                    alt="Ichigo Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Ichigo Milktea</h3>
+
+                    <p>
+                        Sweet strawberry milk tea
+                        with a creamy finish.
+                    </p>
+
+                    <span class="product-price">
+                        ₱105.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/MATCHA.png"
+                    alt="Matcha Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Matcha Milktea</h3>
+
+                    <p>
+                        Smooth creamy milk tea
+                        with earthy matcha flavor.
+                    </p>
+
+                    <span class="product-price">
+                        ₱120.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/ICHIGO MATCHA.png"
+                    alt="Ichigo Matcha Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Ichigo Matcha Milktea</h3>
+
+                    <p>
+                        A creamy combination of
+                        strawberry and matcha.
+                    </p>
+
+                    <span class="product-price">
+                        ₱130.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/CREAMCHEESE.png"
+                    alt="Creamcheese Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Creamcheese Milktea</h3>
+
+                    <p>
+                        Creamy milk tea finished
+                        with a rich cream cheese topping.
+                    </p>
+
+                    <span class="product-price">
+                        ₱120.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/RED ROSE.png"
+                    alt="Red Rose Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Red Rose Milktea</h3>
+
+                    <p>
+                        Fragrant rose flavor blended
+                        with smooth milk tea.
+                    </p>
+
+                    <span class="product-price">
+                        ₱115.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/boba/THAI_.png"
+                    alt="Thai Milktea"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        BOBA DRINK
+                    </p>
+
+                    <h3>Thai Milktea</h3>
+
+                    <p>
+                        Bold Thai tea blended
+                        with creamy milk.
+                    </p>
+
+                    <span class="product-price">
+                        ₱115.00
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="product-card addons-card">
+
+                <ul class="addons-list">
+                    <li>Traditional Black Pearls</li>
+                    <li>White Pearls</li>
+                    <li>Coffee Jelly</li>
+                    <li>Oreo Crumbs</li>
+                    <li>Cream Cheese Cap</li>
+                    <li>Salted Cream Cap</li>
+                    <li>Egg Pudding</li>
+                    <li>Okinawa Brown Sugar Sauce</li>
+                    <li>Ichigo Jam / Compote</li>
+                </ul>
+
+                <div class="product-info">
+
+                    <span class="product-category">BOBA DRINKS</span>
+
+                    <h3>Add-ons</h3>
+
+                    <p>
+                         Customize your favorite boba with an extra touch of sweetness.
+                    </p>
+
+                    <span class="product-price">
+                        ₱15.00 each
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- NUTRITION TABLE -->
+
+    <section class="nutrition-section">
+
+        <div class="section-heading">
+
+            <p class="home-label">
+                KNOW YOUR DRINK
+            </p>
+
+            <h2>
+                Nutrition & Allergen Matrix
+            </h2>
+
+            <p>
+                Check the nutritional information and
+                possible allergens for our boba drinks.
+            </p>
+
+        </div>
+
+
+        <div class="nutrition-table-wrapper">
+
+            <table class="nutrition-table">
+
+                <thead>
+
+                    <tr>
+                        <th>ITEM</th>
+                        <th>CATEGORY</th>
+                        <th>CALORIES</th>
+                        <th>ALLERGENS</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~250 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Pearl Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~350 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Okinawa Brown Sugar Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~330 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Taro Milktea</td>
+                       <td>Boba Drink</td>
+                        <td>~300 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hokkaido Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~300 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Salted Cream Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~350 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Jasmine Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~250 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Oreo Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~380 kcal</td>
+                        <td>Milk, Wheat, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Pudding Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~350 kcal</td>
+                        <td>Milk, Egg, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ichigo Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~280 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Matcha Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~280 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ichigo Matcha Milktea</td>
+                       <td>Boba Drink</td>
+                        <td>~300 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Creamcheese Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~360 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Red Rose Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~270 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thai Milktea</td>
+                        <td>Boba Drink</td>
+                        <td>~280 kcal</td>
+                        <td>Milk, Soy</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <audio id="bgm" loop>
+    <source src="audio/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="music-btn" aria-label="Toggle music" aria-pressed="false">
+    <i class="bi bi-volume-mute-fill"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+</script>
+
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+</script>
+
+<script>
+    const bgm = document.getElementById('bgm');
+    const musicBtn = document.getElementById('music-btn');
+    const icon = musicBtn.querySelector('i');
+
+    bgm.volume = 0.1;
+
+    // Restore the playback position from the last page
+    const savedTime = localStorage.getItem('bgmTime');
+    if (savedTime) bgm.currentTime = parseFloat(savedTime);
+
+    function setPlaying(isPlaying) {
+        icon.className = isPlaying ? 'bi bi-volume-up-fill' : 'bi bi-volume-mute-fill';
+        musicBtn.setAttribute('aria-pressed', isPlaying);
+        localStorage.setItem('bgmOn', isPlaying);
+    }
+
+    // If music was on before, try to resume. The browser may refuse until a click
+    if (localStorage.getItem('bgmOn') === 'true') {
+        bgm.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    }
+
+    musicBtn.addEventListener('click', () => {
+        if (bgm.paused) {
+            bgm.play();
+            setPlaying(true);
+        } else {
+            bgm.pause();
+            setPlaying(false);
+        }
+    });
+    setInterval(() => localStorage.setItem('bgmTime', bgm.currentTime), 1000);
+    window.addEventListener('beforeunload', () => localStorage.setItem('bgmTime', bgm.currentTime));
+</script>
+
+</body>
+
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h4>Socials</h4>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a></li>
+                <li><a href="https://www.youtube.com/@yourpage" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Hours</h4>
+            <p>Mon-Sat: 8AM-8PM<br>Sun: Closed</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Address</h4>
+            <p>12 Sakura Lane<br>Kyoto Corner, District 4</p>
+        </div>
+
+    </div>
+
+    <p class="copyright">&copy; 2026 Patisserie &amp; Boba Plains. All rights reserved.</p>
+</footer>
+
+</html>
